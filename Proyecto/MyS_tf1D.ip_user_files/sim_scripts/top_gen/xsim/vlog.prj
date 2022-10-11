@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/ec67/hdl" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/02c8/hdl/verilog" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/b193/hdl" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/6180/hdl/verilog" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/a08d/hdl/verilog" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/2875/hdl/verilog" --include "../../../../MyS_tf1D.srcs/sources_1/bd/top_gen/ipshared/2c14/hdl/verilog" \
+"../../../bd/top_gen/ip/top_gen_processing_system7_0_0/sim/top_gen_processing_system7_0_0.v" \
+"../../../bd/top_gen/ip/top_gen_auto_pc_0/sim/top_gen_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

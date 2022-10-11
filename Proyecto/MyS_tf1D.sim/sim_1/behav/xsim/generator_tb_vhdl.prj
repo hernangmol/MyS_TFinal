@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MyS_tf.srcs/sources_1/imports/src/clk_div.vhd" \
+"../../../../MyS_tf.srcs/sources_1/imports/src/pwm.vhd" \
+"../../../../MyS_tf.srcs/sources_1/imports/src/sine.vhd" \
+"../../../../MyS_tf.srcs/sources_1/imports/src/generator.vhd" \
+"../../../../MyS_tf.srcs/sim_1/imports/sim/generator_tb.vhd" \
+
+# Do not sort compile order
+nosort

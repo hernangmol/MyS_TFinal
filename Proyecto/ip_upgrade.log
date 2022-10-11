@@ -1,0 +1,37 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Mon Oct 10 10:48:03 2022
+| Host         : hernan-Inspiron-14-3467 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_gen_var_clk_div_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_gen_var_clk_div_0_0 (user.org:user:var_clk_div:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Fri Oct  7 10:03:20 2022
+| Host         : hernan-Inspiron-14-3467 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_gen_ila_generador_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_gen_ila_generador_0_1 (user.org:user:ila_generador:1.0 (Rev. 5)) to Vivado generation flows.
+

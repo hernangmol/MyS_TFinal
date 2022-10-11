@@ -1,0 +1,600 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Oct 10 11:01:03 2022
+# Process ID: 11810
+# Current directory: /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1
+# Command line: vivado -log top_gen_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_gen_wrapper.tcl -notrace
+# Log file: /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper.vdi
+# Journal file: /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source top_gen_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hernan/var_clk_div'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hernan/MyS_tf/MyS_tf.srcs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hernan/ip_repo/control_reg_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/hernan/gen_ip/gen_ip.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
+Command: link_design -top top_gen_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_control_reg_0_0/top_gen_control_reg_0_0.dcp' for cell 'top_gen_i/control_reg_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/top_gen_generator_0_0.dcp' for cell 'top_gen_i/generator_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_ila_0_0/top_gen_ila_0_0.dcp' for cell 'top_gen_i/ila_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_processing_system7_0_0/top_gen_processing_system7_0_0.dcp' for cell 'top_gen_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_rst_ps7_0_100M_0/top_gen_rst_ps7_0_100M_0.dcp' for cell 'top_gen_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_var_clk_div_0_0/top_gen_var_clk_div_0_0.dcp' for cell 'top_gen_i/var_clk_div_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_auto_pc_0/top_gen_auto_pc_0.dcp' for cell 'top_gen_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 136 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: top_gen_i/ila_0 UUID: 7f691a32-d09b-5744-a1c6-42b9ac6aa29d 
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_processing_system7_0_0/top_gen_processing_system7_0_0.xdc] for cell 'top_gen_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_processing_system7_0_0/top_gen_processing_system7_0_0.xdc] for cell 'top_gen_i/processing_system7_0/inst'
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_rst_ps7_0_100M_0/top_gen_rst_ps7_0_100M_0_board.xdc] for cell 'top_gen_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_rst_ps7_0_100M_0/top_gen_rst_ps7_0_100M_0_board.xdc] for cell 'top_gen_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_rst_ps7_0_100M_0/top_gen_rst_ps7_0_100M_0.xdc] for cell 'top_gen_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_rst_ps7_0_100M_0/top_gen_rst_ps7_0_100M_0.xdc] for cell 'top_gen_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'top_gen_i/ila_0/U0'
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'top_gen_i/ila_0/U0'
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'top_gen_i/ila_0/U0'
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'top_gen_i/ila_0/U0'
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc] for cell 'top_gen_i/generator_0/U0'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:7]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:11]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:12]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:15]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:16]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/bd/top_gen/ip/top_gen_generator_0_0/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc] for cell 'top_gen_i/generator_0/U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file /home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_0'. The XDC file /home/hernan/MyS_tf1D/MyS_tf1D.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ena_i'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst_i'. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/hernan/MyS_tf1D/MyS_tf1D.srcs/constrs_1/imports/Trabajo final/lab1_ArtyZ7_10.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 44 instances
+
+21 Infos, 2 Warnings, 9 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1673.723 ; gain = 440.629 ; free physical = 3981 ; free virtual = 10463
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1673.723 ; gain = 0.000 ; free physical = 3973 ; free virtual = 10457
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "588fa8f403b360b7".
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2060.309 ; gain = 0.000 ; free physical = 3508 ; free virtual = 10063
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 18172bec9
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:45 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3507 ; free virtual = 10063
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 1470b79fa
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3504 ; free virtual = 10063
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 1d29719be
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3504 ; free virtual = 10063
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 24 cells
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 1cac74fc4
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:46 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3506 ; free virtual = 10063
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 447 cells
+
+Phase 5 BUFG optimization
+Phase 5 BUFG optimization | Checksum: 1cac74fc4
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:47 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3505 ; free virtual = 10062
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 1cac74fc4
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:47 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3496 ; free virtual = 10062
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 1cac74fc4
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3492 ; free virtual = 10061
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2060.309 ; gain = 0.000 ; free physical = 3492 ; free virtual = 10061
+Ending Logic Optimization Task | Checksum: 1cac74fc4
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 2060.309 ; gain = 26.070 ; free physical = 3504 ; free virtual = 10061
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.902 | TNS=-3.753 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 10 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 25 newly gated: 0 Total Ports: 20
+Number of Flops added for Enable Generation: 1
+
+Ending PowerOpt Patch Enables Task | Checksum: 1600f97ea
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3491 ; free virtual = 10040
+Ending Power Optimization Task | Checksum: 1600f97ea
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2342.430 ; gain = 282.121 ; free physical = 3498 ; free virtual = 10046
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1 Remap
+Phase 1 Remap | Checksum: 1b1f1ba27
+
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3512 ; free virtual = 10048
+INFO: [Opt 31-389] Phase Remap created 5 cells and removed 10 cells
+
+Phase 2 Post Processing Netlist
+Phase 2 Post Processing Netlist | Checksum: ec18097d
+
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3512 ; free virtual = 10048
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Ending Logic Optimization Task | Checksum: ec18097d
+
+Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3512 ; free virtual = 10048
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 2 Warnings, 9 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:24 . Memory (MB): peak = 2342.430 ; gain = 668.707 ; free physical = 3512 ; free virtual = 10048
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3502 ; free virtual = 10041
+INFO: [Common 17-1381] The checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_gen_wrapper_drc_opted.rpt -pb top_gen_wrapper_drc_opted.pb -rpx top_gen_wrapper_drc_opted.rpx
+Command: report_drc -file top_gen_wrapper_drc_opted.rpt -pb top_gen_wrapper_drc_opted.pb -rpx top_gen_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3499 ; free virtual = 10044
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: cc6b899e
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3499 ; free virtual = 10044
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3502 ; free virtual = 10046
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-568] A LUT 'top_gen_i/var_clk_div_0/U0/dclk_o_INST_0' is driving clock pin of 42 registers. This could lead to large hold time violations. First few involved registers are:
+	top_gen_i/generator_0/U0/PWM_1/pwm_o_reg {FDCE}
+	top_gen_i/generator_0/U0/PWM_1/count_reg[5] {FDCE}
+	top_gen_i/generator_0/U0/PWM_1/pwm_no_reg {FDCE}
+	top_gen_i/generator_0/U0/PWM_1/count_reg[8] {FDCE}
+	top_gen_i/generator_0/U0/PWM_1/count_reg[6] {FDCE}
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 315c17c7
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3508 ; free virtual = 10043
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 123ddf6eb
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3497 ; free virtual = 10033
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 123ddf6eb
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3497 ; free virtual = 10033
+Phase 1 Placer Initialization | Checksum: 123ddf6eb
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3497 ; free virtual = 10033
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 19eb0c78e
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3490 ; free virtual = 10026
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19eb0c78e
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3490 ; free virtual = 10026
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16ab9bdd2
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10025
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1148b8988
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10025
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1148b8988
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10025
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1148b8988
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10025
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 16728fe1c
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3488 ; free virtual = 10025
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: d47566ea
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3486 ; free virtual = 10023
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 1247a27a3
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3486 ; free virtual = 10023
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 1247a27a3
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3486 ; free virtual = 10023
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 1247a27a3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10024
+Phase 3 Detail Placement | Checksum: 1247a27a3
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3489 ; free virtual = 10024
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 264f3f062
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 264f3f062
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:12 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3488 ; free virtual = 10025
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.362. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1ddc238db
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+Phase 4.1 Post Commit Optimization | Checksum: 1ddc238db
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:20 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1ddc238db
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1ddc238db
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: fa651daa
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: fa651daa
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3487 ; free virtual = 10024
+Ending Placer Task | Checksum: c3159b08
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3490 ; free virtual = 10027
+INFO: [Common 17-83] Releasing license: Implementation
+75 Infos, 3 Warnings, 9 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3490 ; free virtual = 10027
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3478 ; free virtual = 10023
+INFO: [Common 17-1381] The checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_gen_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3475 ; free virtual = 10014
+INFO: [runtcl-4] Executing : report_utilization -file top_gen_wrapper_utilization_placed.rpt -pb top_gen_wrapper_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3483 ; free virtual = 10023
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_gen_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3483 ; free virtual = 10023
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: b8d37049 ConstDB: 0 ShapeSum: a422abf RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 1b277dbca
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3409 ; free virtual = 9949
+Post Restoration Checksum: NetGraph: e6e1d772 NumContArr: cb960458 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1b277dbca
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3409 ; free virtual = 9950
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1b277dbca
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3395 ; free virtual = 9935
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1b277dbca
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3395 ; free virtual = 9935
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 15dc3f8f4
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3386 ; free virtual = 9927
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.752 | TNS=-3.504 | WHS=-0.912 | THS=-95.095|
+
+Phase 2 Router Initialization | Checksum: 17f7fbe85
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3385 ; free virtual = 9926
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 13dc08c66
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3386 ; free virtual = 9927
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 298
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.159 | TNS=-4.778 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 260256ccc
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.221 | TNS=-4.605 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 177d3cc52
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3388 ; free virtual = 9929
+Phase 4 Rip-up And Reroute | Checksum: 177d3cc52
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3388 ; free virtual = 9929
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1e71f0a53
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3388 ; free virtual = 9929
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.159 | TNS=-4.778 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 21a35925a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 21a35925a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+Phase 5 Delay and Skew Optimization | Checksum: 21a35925a
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 17aebbc65
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.159 | TNS=-4.778 | WHS=0.042  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1f10d3ffa
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+Phase 6 Post Hold Fix | Checksum: 1f10d3ffa
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.21917 %
+  Global Horizontal Routing Utilization  = 1.76585 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 30.6306%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 37.8378%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 32.3529%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1982cd4e6
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1982cd4e6
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3387 ; free virtual = 9928
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1d35e2b04
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3386 ; free virtual = 9927
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.159 | TNS=-4.778 | WHS=0.042  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1d35e2b04
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3386 ; free virtual = 9927
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3401 ; free virtual = 9942
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+93 Infos, 4 Warnings, 9 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:21 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3401 ; free virtual = 9942
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2342.430 ; gain = 0.000 ; free physical = 3390 ; free virtual = 9940
+INFO: [Common 17-1381] The checkpoint '/home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_gen_wrapper_drc_routed.rpt -pb top_gen_wrapper_drc_routed.pb -rpx top_gen_wrapper_drc_routed.rpx
+Command: report_drc -file top_gen_wrapper_drc_routed.rpt -pb top_gen_wrapper_drc_routed.pb -rpx top_gen_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_gen_wrapper_methodology_drc_routed.rpt -pb top_gen_wrapper_methodology_drc_routed.pb -rpx top_gen_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file top_gen_wrapper_methodology_drc_routed.rpt -pb top_gen_wrapper_methodology_drc_routed.pb -rpx top_gen_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/hernan/MyS_tf1D/MyS_tf1D.runs/impl_1/top_gen_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_gen_wrapper_power_routed.rpt -pb top_gen_wrapper_power_summary_routed.pb -rpx top_gen_wrapper_power_routed.rpx
+Command: report_power -file top_gen_wrapper_power_routed.rpt -pb top_gen_wrapper_power_summary_routed.pb -rpx top_gen_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+106 Infos, 4 Warnings, 9 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file top_gen_wrapper_route_status.rpt -pb top_gen_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_gen_wrapper_timing_summary_routed.rpt -pb top_gen_wrapper_timing_summary_routed.pb -rpx top_gen_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_gen_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_gen_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 10 11:04:29 2022...

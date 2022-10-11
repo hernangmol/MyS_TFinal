@@ -1,0 +1,929 @@
+16:46:55 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:51:02 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:56:07 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+17:04:13 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19316	   1144	  22568	  43028	   a814	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:11:50 **** Clean-only build of configuration Debug for project gen_pwm ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  gen_pwm.elf.size  gen_pwm.elf
+ 
+17:11:51 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19316	   1144	  22568	  43028	   a814	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:20:07 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:22:13: warning: implicit declaration of function 'XUartPs_RecvByte' [-Wimplicit-function-declaration]
+      byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+             ^~~~~~~~~~~~~~~~
+../src/gen_pwm.c:25:7: error: too many arguments to function 'print'
+       print(" Recibido = %d\n\r", byte);
+       ^~~~~
+In file included from ../src/gen_pwm.c:8:0:
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+../../gen_pwm_bsp/ps7_cortexa9_0/include/xil_printf.h:40:6: note: declared here
+ void print( const char8 *ptr);
+      ^~~~~
+make: *** [src/gen_pwm.o] Error 1
+17:20:58 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:22:13: warning: implicit declaration of function 'XUartPs_RecvByte' [-Wimplicit-function-declaration]
+      byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+             ^~~~~~~~~~~~~~~~
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70420	   2580	  23328	  96328	  17848	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:23:33 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+17:36:35 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:22:13: warning: implicit declaration of function 'XUartPs_RecvByte' [-Wimplicit-function-declaration]
+      byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+             ^~~~~~~~~~~~~~~~
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70420	   2580	  23328	  96328	  17848	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:38:09 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70420	   2580	  23328	  96328	  17848	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:47:35 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:30:8: warning: implicit declaration of function 'CONTROL_REG_mWriteReg' [-Wimplicit-function-declaration]
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+        ^~~~~~~~~~~~~~~~~~~~~
+../src/gen_pwm.c:30:30: error: 'XPAR_CONTROL_REG_0_S_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_CONTROL_REG_0_S00_AXI_BASEADDR'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              XPAR_CONTROL_REG_0_S00_AXI_BASEADDR
+../src/gen_pwm.c:30:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/gen_pwm.c:30:65: error: 'CONTROL_REG_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/gen_pwm.o] Error 1
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+17:48:59 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:31:8: warning: implicit declaration of function 'CONTROL_REG_mWriteReg' [-Wimplicit-function-declaration]
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+        ^~~~~~~~~~~~~~~~~~~~~
+../src/gen_pwm.c:31:30: error: 'XPAR_CONTROL_REG_0_S_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_CONTROL_REG_0_S00_AXI_BASEADDR'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              XPAR_CONTROL_REG_0_S00_AXI_BASEADDR
+../src/gen_pwm.c:31:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/gen_pwm.c:31:65: error: 'CONTROL_REG_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/gen_pwm.o] Error 1
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+17:49:47 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:32:8: warning: implicit declaration of function 'CONTROL_REG_mWriteReg' [-Wimplicit-function-declaration]
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+        ^~~~~~~~~~~~~~~~~~~~~
+../src/gen_pwm.c:32:30: error: 'XPAR_CONTROL_REG_0_S_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_CONTROL_REG_0_S00_AXI_BASEADDR'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              XPAR_CONTROL_REG_0_S00_AXI_BASEADDR
+../src/gen_pwm.c:32:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/gen_pwm.c:32:65: error: 'CONTROL_REG_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+make: *** [src/gen_pwm.o] Error 1
+17:50:20 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+In file included from ../src/gen_pwm.c:11:0:
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:33:30: error: 'XPAR_CONTROL_REG_0_S_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_CONTROL_REG_0_S00_AXI_BASEADDR'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                              ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:15: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+../src/gen_pwm.c:33:30: note: each undeclared identifier is reported only once for each function it appears in
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                              ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:15: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+../src/gen_pwm.c:33:65: error: 'CONTROL_REG_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'CONTROL_REG_S00_AXI_SLV_REG0_OFFSET'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                                                                 ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:31: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+make: *** [src/gen_pwm.o] Error 1
+17:52:17 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+In file included from ../src/gen_pwm.c:11:0:
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:33:67: error: 'CONTROL_REG_S_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'CONTROL_REG_S00_AXI_SLV_REG0_OFFSET'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+                                                                   ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:31: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../src/gen_pwm.c:33:67: note: each undeclared identifier is reported only once for each function it appears in
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+                                                                   ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:31: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+make: *** [src/gen_pwm.o] Error 1
+17:56:10 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+In file included from ../src/gen_pwm.c:11:0:
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:33:67: error: 'CONTROL_REG_0_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'CONTROL_REG_S00_AXI_SLV_REG0_OFFSET'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_0_S00_AXI_SLV_REG0_OFFSET, 1);
+                                                                   ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:31: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../src/gen_pwm.c:33:67: note: each undeclared identifier is reported only once for each function it appears in
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_0_S00_AXI_SLV_REG0_OFFSET, 1);
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+                                                                   ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:31: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+make: *** [src/gen_pwm.o] Error 1
+17:56:48 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70580	   2580	  23328	  96488	  178e8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:59:51 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+18:12:18 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70580	   2580	  23328	  96488	  178e8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+18:15:18 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+In file included from ../src/gen_pwm.c:11:0:
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:33:30: error: 'XPAR_CONTROL_REG_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_CONTROL_REG_0_S00_AXI_BASEADDR'?
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+                              ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:15: note: in definition of macro 'CONTROL_REG_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+../src/gen_pwm.c:33:30: note: each undeclared identifier is reported only once for each function it appears in
+        CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+                              ^
+../../gen_pwm_bsp/ps7_cortexa9_0/include/control_reg.h:35:15: note: in definition of macro 'CONTROL_REG_mWriteReg'
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+make: *** [src/gen_pwm.o] Error 1
+18:16:47 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70580	   2580	  23328	  96488	  178e8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+18:21:58 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+18:29:34 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:36:13: error: void value not ignored as it ought to be
+        recv = CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+             ^
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+make: *** [src/gen_pwm.o] Error 1
+18:29:56 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:36:111: error: macro "CONTROL_REG_mReadReg" passed 3 arguments, but takes just 2
+        recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+                                                                                                               ^
+../src/gen_pwm.c:36:15: error: 'CONTROL_REG_mReadReg' undeclared (first use in this function); did you mean 'CONTROL_REG_Reg_SelfTest'?
+        recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+               ^~~~~~~~~~~~~~~~~~~~
+               CONTROL_REG_Reg_SelfTest
+../src/gen_pwm.c:36:15: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/gen_pwm.o] Error 1
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+18:36:38 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70668	   2580	  23328	  96576	  17940	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+18:38:48 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+18:41:02 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70732	   2580	  23328	  96640	  17980	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+18:42:24 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+19:13:09 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70732	   2580	  23328	  96640	  17980	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+09:11:56 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70732	   2580	  23328	  96640	  17980	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+09:12:10 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70732	   2580	  23328	  96640	  17980	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+09:14:43 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+09:20:22 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+15:23:48 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71076	   2580	  23328	  96984	  17ad8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+15:26:10 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+15:36:14 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71236	   2580	  23328	  97144	  17b78	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+16:12:51 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71236	   2580	  23328	  97144	  17b78	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+16:14:48 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:51:43 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71236	   2580	  23328	  97144	  17b78	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+16:53:15 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+17:05:29 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71396	   2580	  23328	  97304	  17c18	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:07:53 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+17:11:27 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71412	   2580	  23328	  97320	  17c28	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+17:38:05 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+19:24:56 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+19:26:33 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+19:29:10 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:38:42 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:65:6: error: expected ';' before 'reset'
+      reset = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+      ^~~~~
+../src/gen_pwm.c:17:9: warning: unused variable 'recv' [-Wunused-variable]
+     int recv = 0;
+         ^~~~
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/gen_pwm.o'
+make: *** [src/gen_pwm.o] Error 1
+11:39:17 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:17:9: warning: unused variable 'recv' [-Wunused-variable]
+     int recv = 0;
+         ^~~~
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70964	   2580	  23328	  96872	  17a68	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+11:42:18 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:14:04 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:23:50 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:24:44 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:29:13 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:30:51 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:58:23 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+12:59:19 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+13:10:23 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:17:9: warning: unused variable 'recv' [-Wunused-variable]
+     int recv = 0;
+         ^~~~
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71028	   2580	  23328	  96936	  17aa8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+13:11:58 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+13:34:37 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+13:40:32 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+10:14:30 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+10:15:24 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:09:06 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:12:09 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:29:02 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:29:27 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+11:31:30 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:18:29 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:19:05 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:21:02 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+16:25:15 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+../src/gen_pwm.c: In function 'main':
+../src/gen_pwm.c:22:9: warning: unused variable 'recv' [-Wunused-variable]
+     int recv = 0;
+         ^~~~
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71028	   2580	  23328	  96936	  17aa8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+16:29:25 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+17:26:15 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+20:33:12 **** Auto Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/gen_pwm.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gen_pwm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../gen_pwm_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gen_pwm.d" -MT"src/gen_pwm.o" -o "src/gen_pwm.o" "../src/gen_pwm.c"
+Finished building: ../src/gen_pwm.c
+ 
+Building target: gen_pwm.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../gen_pwm_bsp/ps7_cortexa9_0/lib -o "gen_pwm.elf"  ./src/gen_pwm.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: gen_pwm.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size gen_pwm.elf  |tee "gen_pwm.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71028	   2580	  23328	  96936	  17aa8	gen_pwm.elf
+Finished building: gen_pwm.elf.size
+ 
+20:33:30 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.
+20:34:27 **** Incremental Build of configuration Debug for project gen_pwm ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: No se hace nada para 'main-build'.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gen_pwm/src/helloworld.c&apos; to &apos;gen_pwm.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="gen_pwm.c" stamp="1665000709953" updateReferences="true"/>
+</session>

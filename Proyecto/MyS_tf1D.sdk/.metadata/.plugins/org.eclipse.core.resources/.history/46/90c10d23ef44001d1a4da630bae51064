@@ -1,0 +1,39 @@
+/*
+ * gen_pwm.c: test application
+ *
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xuartps.h"
+
+
+int main()
+{
+    int byte = 0;
+
+	init_platform();
+
+    print("Generador PWM\n\r");
+    print("\n\r");
+    print("1. -> Enable\n\r");
+
+    while(1)
+    {
+    	byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+    	if (byte != 0)
+    	{
+    		printf(" Recibido = %d\n\r", byte-48);
+    		if(byte == 49)
+    		{
+    			CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S_AXI_BASEADDR, CONTROL_REG_S_AXI_SLV_REG0_OFFSET, 1);
+    			print("ENABLE SIGNAL\n\r");
+    		}
+    		byte = 0;
+    	}
+    }
+
+    cleanup_platform();
+    return 0;
+}

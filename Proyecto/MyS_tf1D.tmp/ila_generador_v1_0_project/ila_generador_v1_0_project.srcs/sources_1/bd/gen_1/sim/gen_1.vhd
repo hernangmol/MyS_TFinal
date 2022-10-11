@@ -1,0 +1,9 @@
+--Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------
+--Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+--Date        : Fri Oct  7 09:59:28 2022
+--Host        : hernan-Inspiron-14-3467 running 64-bit Ubuntu 18.04.6 LTS
+--Command     : generate_target gen_1.bd
+--Design      : gen_1
+--Purpose     : IP block netlist
+----------------------------------------------------------------------------------

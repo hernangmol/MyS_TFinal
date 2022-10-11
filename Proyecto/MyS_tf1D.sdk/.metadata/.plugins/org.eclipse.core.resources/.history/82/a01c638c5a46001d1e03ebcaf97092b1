@@ -1,0 +1,75 @@
+/*
+ * gen_pwm.c: test application
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "control_reg.h"
+#include "xuartps.h"
+
+
+int main()
+{
+    int byte = 0;
+    int recv = 0;
+    int enable = 0;
+    int reset = 0;
+    int divisor = 0;
+
+	init_platform();
+
+    print("Generador PWM\n\r");
+    print("\n\r");
+    print("1. -> Activar ENABLE\n\r");
+    print("2. -> Desactivar ENABLE\n\r");
+    print("3. -> Activar RESET\n\r");
+    print("4. -> Desactivar RESET\n\r");
+    print("5. -> Subir frecuencia\n\r");
+
+    while(1)
+    {
+    	byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+    	if (byte != 0)
+    	{
+
+    		switch(byte)
+    		{
+				case 49:
+
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+					break;
+
+				case 50:
+
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 0);
+					break;
+				case 51:
+
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET, 1);
+					break;
+
+				case 52:
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET, 0);
+					break;
+
+				case 53:
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG0_OFFSET, 8);
+					break;
+
+				default:
+
+					enable = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET);
+					reset = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+					divisor = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG0_OFFSET);
+					printf(" ENABLE = %d - RESET = %d - DIVISOR = %d\n\r", enable, reset, divisor);
+    		}
+    		byte = 0;
+    	}
+    }
+
+    cleanup_platform();
+    return 0;
+}

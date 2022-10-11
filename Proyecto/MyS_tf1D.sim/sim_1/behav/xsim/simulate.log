@@ -1,0 +1,7 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+ERROR: Index 100 out of bound 0 to 99
+Time: 20100 us  Iteration: 2  Process: /generator_tb/DUT/SINE_1/line__33
+  File: /home/hernan/MyS_tf/MyS_tf.srcs/sources_1/imports/src/sine.vhd
+
+HDL Line: /home/hernan/MyS_tf/MyS_tf.srcs/sources_1/imports/src/sine.vhd:39

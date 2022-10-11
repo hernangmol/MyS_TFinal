@@ -1,0 +1,87 @@
+/*
+ * gen_pwm.c: test application
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+#include "control_reg.h"
+#include "xuartps.h"
+
+
+int main()
+{
+    int byte = 0;
+    int recv = 0;
+
+	init_platform();
+
+    print("Generador PWM\n\r");
+    print("\n\r");
+    print("1. -> Activar ENABLE\n\r");
+    print("2. -> Desactivar ENABLE\n\r");
+    print("3. -> Activar RESET\n\r");
+    print("4. -> Desactivar RESET\n\r");
+    print("5. -> Subir frecuencia\n\r");
+
+    while(1)
+    {
+    	byte = XUartPs_RecvByte(XPAR_PS7_UART_0_BASEADDR);
+    	if (byte != 0)
+    	{
+
+    		switch(byte)
+    		{
+				case 49:
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET);
+					printf(" Registro 1 = %d\n\r", recv);
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 1);
+					print("ENABLE SIGNAL\n\r");
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET);
+					printf(" Registro 1 = %d\n\r", recv);
+					break;
+				case 50:
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET);
+					printf(" Registro 1 = %d\n\r", recv);
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET, 0);
+					print("ENABLE SIGNAL\n\r");
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG1_OFFSET);
+					printf(" Registro 1 = %d\n\r", recv);
+					break;
+				case 51:
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+					printf(" Registro 2 = %d\n\r", recv);
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET, 1);
+					print("RESET SIGNAL\n\r");
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+					printf(" Registro 2 = %d\n\r", recv);
+					break;
+				case 52:
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+					printf(" Registro 2 = %d\n\r", recv);
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET, 0);
+					print("RESET SIGNAL\n\r");
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG2_OFFSET);
+					printf(" Registro 2 = %d\n\r", recv);
+					break;
+				case 53:
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG0_OFFSET);
+					printf(" Registro 0 = %d\n\r", recv);
+					CONTROL_REG_mWriteReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG0_OFFSET, 4);
+					print("RESET SIGNAL\n\r");
+					recv = CONTROL_REG_mReadReg(XPAR_CONTROL_REG_0_S00_AXI_BASEADDR, CONTROL_REG_S00_AXI_SLV_REG0_OFFSET);
+					printf(" Registro 0 = %d\n\r", recv);
+					break;
+				default:
+					printf(" Recibido = %d\n\r", byte-48);
+
+    		}
+    		byte = 0;
+    	}
+    }
+
+    cleanup_platform();
+    return 0;
+}
